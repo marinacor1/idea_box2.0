@@ -14,4 +14,5 @@ RSpec.describe Idea, type: :model do
 
     expect(idea.quality).to eq("swill")
   end
+
 end
