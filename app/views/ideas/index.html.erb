@@ -1,8 +1,8 @@
 <h1>All Ze Ideas</h1>
-<ul>Idea:
 <% @ideas.each do |idea| %>
-  <li><%=idea.title  %></li>
+  <ul><%=idea.title  %></li>
   <li><%=idea.body  %></li>
   <li><%=idea.quality  %></li>
+  </ul>
   <% end %>
 </ul>
