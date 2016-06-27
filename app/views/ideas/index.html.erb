@@ -1,3 +1,4 @@
+<div class="container">
 <h1>All Ze Ideas</h1>
 <% @ideas.each do |idea| %>
 <div class="new-idea">
@@ -11,8 +12,13 @@
 <h2>Create a new idea:</h2>
 
 <form>
+  <fieldset class="form-group">
   Idea title:
   <input id="idea-title" type="text" name:"Title:"><br>
+</fieldset>
+<fieldset class="form-group">
   Idea body: <input id="idea-body" type="text" name:"Body:"><br>
+</fieldset>
 </form>
 <button id="submit-button" type="button">Save</button>
+</div>
