@@ -10,10 +10,10 @@ RSpec.feature "visitor sees list of existing ideas" do
     expect(page).to have_content "swill"
   end
 
-  xit "shows ideas in descending order" do 
+  xit "shows ideas in descending order" do
     idea = Idea.create(title: "x", body: "y", quality: "swill")
     idea2 = Idea.create(title: "a", body: "b", quality: "plausible")
 
-    expect(page).to have_content("a")
+    expect(page).to have_content "a"
   end
 end
