@@ -2,18 +2,14 @@
   <div class="landing-text">
   <h1 id="ideas-page-title">All Ideas</h1>
   <div class="new-idea-parent">
-    <% @ideas.each do |idea| %>
     <div class= "any-idea">
-      <div class="new-idea" data-idea-id= "<%= idea.id %>">
-        <ul id="idea-title-show" data-title-id = "<%= idea.id %>" contentEditable="true"><%=idea.title  %></ul>
-        <ul id="idea-body-show" data-body-id = "<%=idea.id %>" contentEditable="true"><%=idea.body  %></ul>
-        <ul>Quality: <%=idea.quality  %></ul>
+
         <div class="delete-button">
           <input type="submit" value="Delete">
         </div>
+
       </div>
     </div>
-    <% end %>
   </div>
 
 <h2 id="new-ideas-header">Create a New Idea:</h2>
