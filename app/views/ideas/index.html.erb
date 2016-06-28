@@ -1,15 +1,15 @@
 <div class="landing-page">
   <div class="landing-text">
   <h1 id="ideas-page-title">All Ideas</h1>
-  <% @ideas.each do |idea| %>
   <div class="new-idea-parent">
-    <div class="new-idea">
-      <ul id="idea-title-show" data-title-id = "<%= idea.id %>" contentEditable="true"><%=idea.title  %></ul>
-      <ul id="idea-body-show<%= idea.id %>" contentEditable="true"><%=idea.body  %></ul>
-      <ul>Quality: <%=idea.quality  %></ul>
-    </div>
+    <% @ideas.each do |idea| %>
+      <div class="new-idea">
+        <ul id="idea-title-show" data-title-id = "<%= idea.id %>" contentEditable="true"><%=idea.title  %></ul>
+        <ul id="idea-body-show" data-body-id = "<%=idea.id %>" contentEditable="true"><%=idea.body  %></ul>
+        <ul>Quality: <%=idea.quality  %></ul>
+      </div>
+    <% end %>
   </div>
-      <% end %>
 
 <h2 id="new-ideas-header">Create a New Idea:</h2>
 <div class="new-idea-form">

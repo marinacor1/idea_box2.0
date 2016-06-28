@@ -9,12 +9,13 @@ function editTitle() {
 function editBody(){
   $("#idea-body-show").on('blur keydown', function(event){
     if (event.type === "blur" || event.keyCode === 13) {
-      editContent(this, {body: $(this).text()})
+      editContent(this, {body: $(this).text(), id: $(this).data('body-id')})
     }
   })
 }
 
 function editContent(elementHTML, updatedContent){
+  debugger
 var options =  {
     type: "PATCH",
     url: "/api/v1/ideas/" + updatedContent.id,
