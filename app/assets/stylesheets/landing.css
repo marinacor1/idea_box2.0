@@ -1,5 +1,5 @@
 .landing-page {
-  background: url("https://images.unsplash.com/photo-1443140570159-279cf334cf24?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=8aaf7f1447874a5ad9749677be76be06") no-repeat center;
+  background: url("https://s3-us-west-2.amazonaws.com/turingconnect/dark_embroidery.png");
   height: 800px;
   color: #696969;
   min-height: 100vh;
