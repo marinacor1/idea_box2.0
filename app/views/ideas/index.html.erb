@@ -4,8 +4,8 @@
   <% @ideas.each do |idea| %>
     <div class="new-idea">
       <ul>
-      <ul id="idea-title-show">  Title: <%=idea.title  %></ul>
-        <ul id="idea-body-show">Idea: <%=idea.body  %></ul>
+      <ul id="idea-title-show" contentEditable="true">  Title: <%=idea.title  %></ul>
+        <ul id="idea-body-show" contentEditable="true">Idea: <%=idea.body  %></ul>
       <ul>Quality: <%=idea.quality  %></ul>
       </ul>
     </div>
