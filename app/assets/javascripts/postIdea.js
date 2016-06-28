@@ -5,7 +5,9 @@ function postIdea(){
       type: "POST",
       url: "api/v1/ideas",
       data: ideaParams,
-      success: alert("Idea posted!")
+      success: function(){
+        $('.new-idea').append( "Hello")
+      }
     })
   });
 };
