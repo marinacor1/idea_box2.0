@@ -15,7 +15,6 @@ function editBody(){
 }
 
 function editContent(elementHTML, updatedContent){
-  debugger
 var options =  {
     type: "PATCH",
     url: "/api/v1/ideas/" + updatedContent.id,
