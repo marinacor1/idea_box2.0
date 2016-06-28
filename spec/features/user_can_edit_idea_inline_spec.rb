@@ -12,7 +12,6 @@ RSpec.feature "user can edit idea inline" do
 
     visit '/'
 
-    expect(page).to have_content "Looking for a job in NYC!"
-    expect(page).to not_have_content "1602"
+    expect(page).to have_content "1602Looking for a job in NYC!"
   end
 end
