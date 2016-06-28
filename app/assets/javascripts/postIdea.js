@@ -5,7 +5,18 @@ function postIdea(){
       type: "POST",
       url: "api/v1/ideas",
       data: ideaParams,
-      success: alert("Idea posted!")
-    })
+      success: function (newIdea){
+        noReload(newIdea)
+    }
   });
+})
 };
+
+function noReload(idea){
+  $('.new-idea-parent').prepend(formatIdea(idea))
+}
+
+function formatIdea(idea) {
+// need a way to get a bunch of ideas and then render those on the page (internal api)
+  return '<div class="new-idea"><ul id="idea-title-show" data-title-id =' + idea.id +' contentEditable="true">' + idea.title + '</ul><ul id="idea-body-show" data-body-id =' + idea.id +' contentEditable="true">' + idea.body + '</ul></div>'
+}

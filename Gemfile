@@ -24,3 +24,7 @@ group :development do
 end
 
 gem 'rails_12factor', group: :production
+
+group :test do
+  gem 'selenium-webdriver'
+end
