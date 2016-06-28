@@ -15,7 +15,7 @@ RSpec.feature "visitor sees list of existing ideas" do
     idea2 = Idea.create(title: "a", body: "b", quality: "plausible")
 
     visit root_path
-save_and_open_page
+
     expect(page).to have_content "a"
   end
 end
