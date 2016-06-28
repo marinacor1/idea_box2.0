@@ -7,6 +7,7 @@ function editTitle() {
 }
 
 function editBody(){
+  debugger
   $("#idea-body-show").on('blur keydown', function(event){
     if (event.type === "blur" || event.keyCode === 13) {
       editContent(this, {body: $(this).text()})
