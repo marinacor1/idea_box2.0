@@ -1,24 +1,25 @@
-<div class="container">
-<h1>All Ze Ideas</h1>
-<% @ideas.each do |idea| %>
-<div class="new-idea">
-  <ul>
-    Title: <%=idea.title  %>
-    <p>Idea: <%=idea.body  %></p>
-  </ul>
-  <% end %>
-</ul>
-</div>
-<h2>Create a new idea:</h2>
+<div class="landing-page">
+  <h1 id="ideas-page-title">All Ideas</h1>
+  <% @ideas.each do |idea| %>
+    <div class="new-idea">
+      <ul>
+        Title: <%=idea.title  %>
+        <p>Idea: <%=idea.body  %></p>
+      </ul>
+    </div>
+      <% end %>
 
-<form>
-  <fieldset class="form-group">
-  Idea title:
-  <input id="idea-title" type="text" name:"Title:"><br>
-</fieldset>
-<fieldset class="form-group">
-  Idea body: <input id="idea-body" type="text" name:"Body:"><br>
-</fieldset>
-</form>
-<button id="submit-button" type="button">Save</button>
+<h2 id="new-ideas-header">Create a New Idea:</h2>
+<div class="new-idea-form">
+  <form>
+    <fieldset class="form-group">
+      Idea Title:
+      <input id="idea-title" type="text" name:"Title:"><br>
+    </fieldset>
+    <fieldset class="form-group">
+      Idea Body: <input id="idea-body" type="text" name:"Body:"><br>
+    </fieldset>
+  </form>
+    <button id="submit-button" type="button">Save</button>
+</div>
 </div>
