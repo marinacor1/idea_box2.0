@@ -10,13 +10,18 @@ class Api::V1::IdeasController < ApplicationController
   end
 
   def update
-    binding.pry
-    respond_with Idea.update(idea_params)
+    idea = Idea.find(params['id'])
+    if idea.update(idea_params)
+      idea.save
+      render json: {response: 'successful'}
+    else
+      render json: {response: 'failed'}
+    end
   end
 
   private
 
   def idea_params
-    params.permit(:title, :body, :quality)
+    params.permit(:title, :body, :quality, :id)
   end
 end

@@ -1,7 +1,7 @@
 function editTitle() {
-  $("#idea-title-show").on('blur keydown', function(event){
+  $("#idea-title-show" ).on('blur keydown', function(event){
     if (event.type ==="blur" || event.keyCode === 13) {
-      editContent(this, {title: $(this).text()})
+      editContent(this, {title: $(this).text(), id: $(this).data('title-id')})
     }
   })
 }
@@ -15,14 +15,12 @@ function editBody(){
 }
 
 function editContent(elementHTML, updatedContent){
-  $.ajax({
+var options =  {
     type: "PATCH",
-    url: "/api/v1/ideas" + elementHTML.parentElement.id,
+    url: "/api/v1/ideas/" + updatedContent.id,
     data: {
-      user: {
         title: updatedContent.title,
         body: updatedContent.body
-        }
       },
       dataType: "json",
       success: function(datum){
@@ -33,5 +31,6 @@ function editContent(elementHTML, updatedContent){
         $('.user-flash').text('Update unsuccessful.')
       }
     }
-  })
+  }
+  $.ajax(options)
 }
