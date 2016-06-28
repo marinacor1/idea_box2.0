@@ -12,7 +12,6 @@
 .new-idea{
   background-color: #8B0A50;
   width: 30%;
-  font-size: 120%;
   padding-left: 5px;
   border-radius: 7px;
 }
@@ -39,4 +38,8 @@
 
 .landing-text {
   padding-left: 30px;
+}
+
+#delete-button {
+  margin: 10px;
 }
