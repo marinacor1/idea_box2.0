@@ -9,6 +9,11 @@ class Api::V1::IdeasController < ApplicationController
     respond_with Idea.create(idea_params)
   end
 
+  def update
+    binding.pry
+    respond_with Idea.update(idea_params)
+  end
+
   private
 
   def idea_params
