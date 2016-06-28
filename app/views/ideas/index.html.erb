@@ -1,0 +1,27 @@
+<div class="landing-page">
+  <div class="landing-text">
+  <h1 id="ideas-page-title">All Ideas</h1>
+  <% @ideas.each do |idea| %>
+    <div class="new-idea">
+      <ul>
+        Title: <%=idea.title  %>
+        <p>Idea: <%=idea.body  %></p>
+      </ul>
+    </div>
+      <% end %>
+
+<h2 id="new-ideas-header">Create a New Idea:</h2>
+<div class="new-idea-form">
+  <form>
+    <fieldset class="form-group">
+      Idea Title:
+      <input id="idea-title" type="text" name:"Title:"><br>
+    </fieldset>
+    <fieldset class="form-group">
+      Idea Body: <input id="idea-body" type="text" name:"Body:"><br>
+    </fieldset>
+  </form>
+    <button id="submit-button" type="button">Save</button>
+</div>
+</div>
+</div>
