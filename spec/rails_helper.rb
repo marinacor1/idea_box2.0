@@ -14,6 +14,20 @@ RSpec.configure do |config|
   config.infer_spec_type_from_file_location!
 
   config.filter_rails_from_backtrace!
+
+  config.around(:each, js: true) do |example|
+    DatabaseCleaner.strategy = :truncation
+    ActiveRecord::Base.shared_connection = ActiveRecord::Base.connection
+    example.run
+    ActiveRecord::Base.shared_connection = nil
+  end
+end
+class ActiveRecord::Base
+  mattr_accessor :shared_connection
+  @@shared_connection = nil
+  def self.connection
+    @@shared_connection || retrieve_connection
+  end
 end
 
 require 'capybara/rspec'
@@ -33,14 +47,9 @@ RSpec.configure do |config|
   end
 
   config.before(:each, type: :feature) do
-    # :rack_test driver's Rack app under test shares database connection
-    # with the specs, so continue to use transaction strategy for speed.
     driver_shares_db_connection_with_specs = Capybara.current_driver == :rack_test
 
     if !driver_shares_db_connection_with_specs
-      # Driver is probably for an external browser with an app
-      # under test that does *not* share a database connection with the
-      # specs, so use truncation strategy.
       DatabaseCleaner.strategy = :truncation
     end
   end
