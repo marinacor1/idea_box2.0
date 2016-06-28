@@ -1,6 +1,5 @@
 .landing-page {
   background: url("https://s3-us-west-2.amazonaws.com/turingconnect/dark_embroidery.png");
-  height: 800px;
   color: #696969;
   min-height: 100vh;
 }
