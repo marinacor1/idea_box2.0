@@ -6,9 +6,9 @@ RSpec.feature "user can edit idea inline" do
 
     visit "/"
 
-    find(".new-title-show").click
-    find(".new-title-show").native.send_keys("Looking for a job in NYC!")
-    find(".new-ideas-header").click
+    find("#idea-title-show").click
+    find("#idea-title-show").native.send_keys("Looking for a job in NYC!")
+    find("#new-ideas-header").click
 
     visit '/'
 
