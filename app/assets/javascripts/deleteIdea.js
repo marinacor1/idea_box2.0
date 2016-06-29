@@ -1,11 +1,14 @@
 function deleteIdea(){
-  $('.new-idea').delegate('.delete-button', 'click', function(){
-    var ideaId = $(this).closest('.new-idea').data('idea-id')
+  $('.any-idea').delegate('.delete-button', 'click', function(){
+    debugger
+    var ideaId = $(this).closest('#idea').data('idea-id')
+    debugger
   var call = {
     type: "DELETE",
     url: "api/v1/ideas/" + ideaId,
     success: function(data) {
-      $('.new-idea' + ideaId).remove();
+      debugger
+      $('.new-idea-' + ideaId).remove();
     }
   }
    $.ajax(call)

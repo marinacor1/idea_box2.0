@@ -3,7 +3,8 @@
   <h1 id="ideas-page-title">All Ideas</h1>
   <div class="new-idea-parent">
     <% @ideas.each do |idea| %>
-      <div class="new-idea" data-idea-id = "<%= idea.id %>">
+    <div class="any-idea">
+      <div class="new-idea-<%= idea.id %>" data-idea-id = "<%= idea.id %>" id="idea">
         <ul id="idea-title-show" data-title-id = "<%= idea.id %>" contentEditable="true"><%=idea.title  %></ul>
         <ul id="idea-body-show" data-body-id = "<%=idea.id %>" contentEditable="true"><%=idea.body  %></ul>
         <ul>Quality: <%=idea.quality  %></ul>
@@ -11,6 +12,7 @@
           <input type="submit" value="Delete">
         </div>
       </div>
+    </div>
     <% end %>
   </div>
 
