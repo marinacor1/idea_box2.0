@@ -13,3 +13,19 @@ function increaseQuality(){
     })
 })
 }
+
+function decreaseQuality(){
+  $('.any-idea').delegate('#minus-quality', 'click', function(){
+    var ideaId = $(this).closest('#idea').data('idea-id')
+    var ideaDiv = $(this).closest('#idea')
+  $.ajax({
+    type: "PATCH",
+    url: "/api/v1/ideas/" + ideaId,
+    data: {changeValue: "decrease"},
+    dataType: "json",
+    success: function(data){
+    ideaDiv.find('#idea-quality-show').text('Quality: ' + data.quality)
+    }
+    })
+})
+}
