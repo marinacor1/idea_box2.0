@@ -26,8 +26,8 @@ function formatIdea(idea) {
   idea.id +' contentEditable="true">' + idea.title +
   '</ul><ul id="idea-body-show" data-body-id =' + idea.id +
   ' contentEditable="true">' + idea.body + '</ul><ul>Quality:' +idea.quality  +
-  '</ul><ul><button id="plus-quality" type="button"> + </button>' +
-  '<button id="minus-quality" type="button"> - </button></ul>' +
+  '</ul><ul><button id="plus-quality" type="button"> Thumbs Up </button>' +
+  '<button id="minus-quality" type="button"> Thumbs Down </button></ul>' +
   '<ul><div class="delete-button"><input type="submit" value="Delete">' +
   '</div></ul></div>'
 }
