@@ -14,7 +14,7 @@ class Api::V1::IdeasController < ApplicationController
     if params[:changeValue] == "increase"
       idea.quality = idea.increase_quality
       idea.save
-    elsif params[:changeValue == "decrease"]
+    elsif params[:changeValue] == "decrease"
       idea.quality = idea.decrease_quality
       idea.save
     else
