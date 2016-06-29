@@ -21,6 +21,10 @@ class Idea < ActiveRecord::Base
   def decrease_quality
     qualities = ["swill", "plausible", "genius"]
     current_index = qualities.index(self.quality)
-    new_quality = qualities[current_index - 1]
+    if current_index == 0
+      new_quality = qualities[current_index]
+    else
+      new_quality = qualities[current_index - 1]
+    end
   end
 end
