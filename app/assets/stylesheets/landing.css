@@ -1,43 +1,78 @@
 .landing-page {
-  background: url("https://s3-us-west-2.amazonaws.com/turingconnect/dark_embroidery.png");
+  padding-top: 20px;
+  background: url(typewriter.jpg) center;
   color: #696969;
-  min-height: 100vh;
+  background-size: cover;
+  height: 800px;
+
 }
 
 #ideas-page-title {
   padding-left: 20px;
   padding-top: 20px;
+  background-color: #dfdfdf;
+  text-align: center;
+  width: 70%;
+  height: 50px;
+  margin: 10px;
+  font-family: monospace;
+  border-radius: 7px;
+  border-style: solid;
+  border-width: 2px;
 }
 
 .new-idea{
+  opacity: 0.8;
   background-color: #dcdcdc;
-  width: 30%;
+  font-family: monospace;
+  width: 50%;
   font-size: 120%;
-  padding-left: 5px;
+  padding: 0px 0px 0px 0px;
   border-radius: 7px;
+  border-style: solid;
+  border-width: 2px;
 }
 
 
 #new-ideas-header {
-  width: 100%;
-  padding-left: 30px;
-  color: black;
+  padding-left: 20px;
+  padding-top: 20px;
+  background-color: white;
+  text-align: center;
+  width: 40%;
+  height: 40px;
+  margin: 10px;
+  font-family: monospace;
+  border-radius: 7px;
+  border-style: solid;
+  border-width: 2px;
+
 }
 
 .new-idea-form{
   padding-left: 30px;
-  background-color: #7093DB;
-  width: 30%;
+  background-color: white;
+  width: 50%;
   padding: 10px;
   border-radius: 7px;
   color: black;
+  font-family: monospace;
+  border-style: solid;
+  border-width: 2px;
+
 }
 
 #submit-button {
   background-color: #696969;
   border-radius: 7px;
+  font-family: monospace;
 }
 
 .landing-text {
   padding-left: 30px;
+}
+
+.delete-button{
+  border-radius: 7px;
+  font-family: monospace;
 }
