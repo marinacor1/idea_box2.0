@@ -9,7 +9,7 @@
       <div class="new-idea" data-idea-id = "<%= idea.id %>" id="idea">
         <ul id="idea-title-show" data-title-id = "<%= idea.id %>" contentEditable="true"><%=idea.title  %></ul>
         <ul id="idea-body-show" data-body-id = "<%=idea.id %>" contentEditable="true"><%=idea.body  %></ul>
-        <ul>Quality: <%=idea.quality  %></ul>
+        <ul id="idea-quality-show" data-body-id = "<%=idea.id %>">Quality: <%=idea.quality  %></ul>
         <ul><button id="plus-quality" type="button"> + </button>
         <button id="minus-quality" type="button"> - </button></ul>
         <ul><div class="delete-button">
