@@ -7,6 +7,7 @@ function postIdea(){
       data: ideaParams,
       success: function (newIdea){
         noReload(newIdea)
+        clearTextfields();
     }
   });
 })
@@ -16,6 +17,10 @@ function noReload(idea){
   $('.new-idea-parent').prepend(formatIdea(idea))
 }
 
+function clearTextfields(){
+  $('#idea-title').val('');
+  $('#idea-body').val('');
+}
 function formatIdea(idea) {
   return '<div class="new-idea"><ul id="idea-title-show" data-title-id =' + idea.id +' contentEditable="true">' + idea.title + '</ul><ul id="idea-body-show" data-body-id =' + idea.id +' contentEditable="true">' + idea.body + '</ul><ul>Quality:' +idea.quality  +'</ul></div>'
 }
