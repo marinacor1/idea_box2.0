@@ -1,6 +1,7 @@
 $(document).ready(function(){
-  // allIdeas()
+  allIdeas()
   postIdea()
   editTitle()
   editBody()
+  deleteIdea()
 });
