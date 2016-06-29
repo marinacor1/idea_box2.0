@@ -22,5 +22,12 @@ function clearTextfields(){
   $('#idea-body').val('');
 }
 function formatIdea(idea) {
-  return '<div class="new-idea"><ul id="idea-title-show" data-title-id =' + idea.id +' contentEditable="true">' + idea.title + '</ul><ul id="idea-body-show" data-body-id =' + idea.id +' contentEditable="true">' + idea.body + '</ul><ul>Quality:' +idea.quality  +'</ul></div>'
+  return '<div class="new-idea"><ul id="idea-title-show" data-title-id =' +
+  idea.id +' contentEditable="true">' + idea.title +
+  '</ul><ul id="idea-body-show" data-body-id =' + idea.id +
+  ' contentEditable="true">' + idea.body + '</ul><ul>Quality:' +idea.quality  +
+  '</ul><ul><button id="plus-quality" type="button"> + </button>' +
+  '<button id="minus-quality" type="button"> - </button></ul>' +
+  '<ul><div class="delete-button"><input type="submit" value="Delete">' +
+  '</div></ul></div>'
 }
