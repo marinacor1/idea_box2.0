@@ -1,5 +1,6 @@
 function searchIdeas(){
   $(".search-form").keyup(function(event){
+    binding.pry
     var searchParam = $(this).val().toLowerCase();
     var currentIdeas = $('#index').children();
     currentIdeas.removeClass('invisible');
