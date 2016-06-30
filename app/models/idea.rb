@@ -1,11 +1,31 @@
 class Idea < ActiveRecord::Base
   enum quality: [:swill, :plausible, :genius]
 
-  def body_truncation(body)
-    if body.length > 100
-      body.slice!(100..-1)
-      body
+  def body_truncation
+    if self.body.length > 100
+      letters = self.body.split("")
+      if letters[99] == " "
+        self.body.slice!(100..-1)
+        self.body
+      else
+        words = self.body.split
+        last_word = words.inject(0) do |sum, word|
+          if sum < 100
+            sum += word.length
+          else
+            return truncate_by_word(words, word)
+          end
+        end
+      end
+    else
+      self.body
     end
+  end
+
+  def truncate_by_word(words, word)
+    current_index = words.index("#{word}")
+    words.slice!(current_index)
+    words.join(" ")
   end
 
   def change_quality(data)
@@ -17,7 +37,6 @@ class Idea < ActiveRecord::Base
       decrease_quality(current_index)
     else
     end
-
   end
 
   def increase_quality(current_index)

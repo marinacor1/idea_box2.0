@@ -7,8 +7,8 @@
 <br>
     <div class="any-idea">
       <div class="new-idea" data-idea-id = "<%= idea.id %>" id="idea">
-        <ul id="idea-title-show" data-title-id = "<%= idea.id %>" contentEditable="true"><%=idea.title  %></ul>
-        <ul id="idea-body-show" data-body-id = "<%=idea.id %>" contentEditable="true"><%=idea.body  %></ul>
+        <ul id="idea-title-show" data-title-id = "<%= idea.id %>" contentEditable="true"><strong>Title: </strong><%=idea.title  %></ul>
+        <ul id="idea-body-show" data-body-id = "<%=idea.id %>" contentEditable="true"><strong>Body: </strong><%=idea.body_truncation  %></ul>
         <ul id="idea-quality-show" data-body-id = "<%=idea.id %>">Quality: <%=idea.quality  %></ul>
         <ul><button id="plus-quality" type="button"> Thumbs Up </button>
         <button id="minus-quality" type="button"> Thumbs Down </button></ul>
