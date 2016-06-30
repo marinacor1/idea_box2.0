@@ -11,14 +11,11 @@ class Api::V1::IdeasController < ApplicationController
 
   def update
     idea = Idea.find(params['id'])
-    if params[:changeValue] == "increase"
-      idea.quality = idea.increase_quality
+    if params[:changeValue]
+      idea.quality = idea.change_quality(params[:changeValue])
       idea.save
-    elsif params[:changeValue] == "decrease"
-      idea.quality = idea.decrease_quality
-      idea.save
-    else
     end
+
     if idea.update(idea_params)
       idea.save
       render json: {response: 'successful', quality: idea.quality}
