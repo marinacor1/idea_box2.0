@@ -1,6 +1,6 @@
 .landing-page {
   padding-top: 20px;
-  background: url(typewriter.jpg) center repeat;
+  background: url('https://images.unsplash.com/42/cA4aKEIPQrerBnp1yGHv_IMG_9534-3-2.jpg?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=f2df8d746b1b3284d3d5b6bae9ed2010') center repeat;
   color: #696969;
   background-size: cover;
   min-height: 100vh;
