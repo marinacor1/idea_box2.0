@@ -15,4 +15,11 @@ RSpec.describe Idea, type: :model do
     expect(idea.quality).to eq("swill")
   end
 
+  it "does not truncate if body is less than 100" do
+    idea = Idea.create(title: "x", body: "lol")
+    new_idea = idea.body_truncation
+
+    expect(new_idea).to eq("lol")
+  end
+
 end
