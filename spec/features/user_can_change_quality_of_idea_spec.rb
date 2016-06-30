@@ -12,7 +12,15 @@ RSpec.feature "user change quality of idea" do
     expect(page).to have_content "plausible"
   end
 
-  xit "decreases with a thumbs down", js: true do
+  it "decreases with a thumbs down", js: true do
+    idea = Idea.create(title: "yolanda", body: "wassup", quality: "genius")
+
+    visit "/"
+
+    click_on "Thumbs Down"
+
+    expect(page).to_not have_content "genius"
+    expect(page).to have_content "plausible"
 
   end
 end
