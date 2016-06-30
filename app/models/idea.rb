@@ -33,7 +33,7 @@ class Idea < ActiveRecord::Base
   def truncate_by_word(words, last_word)
     current_index = words.index("#{last_word}")
     deleted = words.slice!(0..current_index)
-    deleted.join(" ")
+    deleted.join(" ") + "..."
   end
 
   def change_quality(data)
