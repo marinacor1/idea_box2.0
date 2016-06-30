@@ -5,4 +5,5 @@ $(document).ready(function(){
   deleteIdea()
   increaseQuality()
   decreaseQuality()
+  searchIdeas()
 });
