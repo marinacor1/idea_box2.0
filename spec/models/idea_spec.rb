@@ -36,4 +36,26 @@ RSpec.describe Idea, type: :model do
     expect(upgraded).to eq("plausible")
   end
 
+  it "will change the quality down if the data decreases" do
+    idea = Idea.create(title: "Long idea", body: " Quokkas can be funny.", quality: "genius")
+    downgraded = idea.change_quality("decrease")
+
+    expect(downgraded).to eq("plausible")
+  end
+
+  it "will max at genius" do
+    idea = Idea.create(title: "Long idea", body: " Quokkas can be funny.", quality: "genius")
+    upgraded = idea.change_quality("increase")
+
+    expect(upgraded).to eq("genius")
+  end
+
+  it "will not go lower than swill" do
+    idea = Idea.create(title: "Long idea", body: " Quokkas can be funny.", quality: "swill")
+    downgraded = idea.change_quality("decrease")
+
+    expect(downgraded).to eq("swill")
+  end
+
+
 end
