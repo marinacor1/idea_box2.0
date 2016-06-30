@@ -3,22 +3,30 @@ class Idea < ActiveRecord::Base
 
   def body_truncation
     if self.body.length > 100
-      letters = self.body.split("")
-      if letters[99] == " "
-        self.body.slice!(100..-1)
-        self.body
-      else
-        words = self.body.split
-        last_word = words.inject(0) do |sum, word|
-          if sum < 100
-            sum += word.length
-          else
-            return truncate_by_word(words, word)
-          end
-        end
-      end
+      letter_count
     else
       self.body
+    end
+  end
+
+  def letter_count
+    letters = self.body.split("")
+    if letters[99] == " "
+      self.body.slice!(100..-1)
+      self.body
+    else
+      word_count_check
+    end
+  end
+
+  def word_count_check
+    words = self.body.split
+    last_word = words.inject(0) do |sum, word|
+      if sum < 100
+        sum += word.length
+      else
+        return truncate_by_word(words, word)
+      end
     end
   end
 
