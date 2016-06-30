@@ -21,6 +21,7 @@ function clearTextfields(){
   $('#idea-title').val('');
   $('#idea-body').val('');
 }
+
 function formatIdea(idea) {
   return '<div class="new-idea"><ul id="idea-title-show" data-title-id =' +
   idea.id +' contentEditable="true">' + 'Title: ' +idea.title +
