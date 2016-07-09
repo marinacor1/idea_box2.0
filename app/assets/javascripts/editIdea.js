@@ -1,4 +1,5 @@
 function editTitle() {
+  //possible timer here
   $("#idea-title-show" ).on('blur keydown', function(event){
     if (event.type ==="blur" || event.keyCode === 13) {
       editContent(this, {title: $(this).text(), id: $(this).data('title-id')})
