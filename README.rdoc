@@ -2,9 +2,9 @@ A JavaScript project that allow ideas to be organized and displayed.
 
 To run application:
 
-`git clone the application
+`git clone the application`
 
-run `rake db:create to create the database
+run `rake db:create` to create the database
 
 run `rake db:migrate` to update migrations
 
@@ -23,7 +23,7 @@ Functions:
 * View all ideas
 
 *Rate idea with a thumbs up and thumbs down (Ratings can be: swill, plausible, genius)
-
+  
 All ideas are alphabetized
 
 If any issue persists, just refresh page.
