@@ -2,13 +2,13 @@ A JavaScript project that allow ideas to be organized and displayed.
 
 To run application:
 
-```git clone``` the application
+`git clone the application
 
-run ```rake db:create``` to create the database
+run `rake db:create to create the database
 
-run ```rake db:migrate``` to update migrations
+run `rake db:migrate` to update migrations
 
-open your browser and visit ```http://localhost:3000```
+open your browser and visit `http://localhost:3000`
 
 You will see the initial idea box.
 
