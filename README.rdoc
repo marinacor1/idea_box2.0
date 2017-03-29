@@ -1,28 +1,29 @@
-== README
+A JavaScript project that allow ideas to be organized and displayed.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+To run application:
 
-Things you may want to cover:
+```git clone``` the application
 
-* Ruby version
+run ```rake db:create``` to create the database
 
-* System dependencies
+run ```rake db:migrate``` to update migrations
 
-* Configuration
+open your browser and visit ```http://localhost:3000```
 
-* Database creation
+You will see the initial idea box.
 
-* Database initialization
+Functions:
 
-* How to run the test suite
+* Create new ideas (with title and body)
 
-* Services (job queues, cache servers, search engines, etc.)
+* Edit current ideas
 
-* Deployment instructions
+* Delete a specific idea
 
-* ...
+* View all ideas
 
+*Rate idea with a thumbs up and thumbs down (Ratings can be: swill, plausible, genius)
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+All ideas are alphabetized
+
+If any issue persists, just refresh page.
